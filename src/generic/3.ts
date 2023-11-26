@@ -3,8 +3,20 @@
   Використовуйте generics, щоб вказати, що ці об'єкти можуть бути будь-якого типу.
 */
 
-function merge (objA, objB) {
+function merge<T extends Object, U>(objA: T, objB: U): Object {
   return Object.assign(objA, objB);
 }
 
-export {}
+// const AAA = {
+// name: 'got',
+// age: 15,
+// };
+
+// const BBB ={
+// age:30,
+// city: 'Kyiv',
+// }
+
+// console.log(merge(AAA, BBB));
+
+export {};
