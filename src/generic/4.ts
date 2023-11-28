@@ -1,7 +1,7 @@
 /*
   Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
 */
-interface T {}
+
 
 class Component <T> {
   constructor (public props:T) {
@@ -9,11 +9,11 @@ class Component <T> {
   }
 }
 
-interface U extends T {
+interface PropsTitle  {
   title:string;
 } 
 
-class Page extends Component <U> {
+class Page extends Component <PropsTitle> {
   pageInfo (){
     console.log(this.props.title);
   }
